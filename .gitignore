@@ -1,0 +1,27 @@
+#######
+# latex
+*.aux
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+#*.pdf
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.out
+
+#######
+# emacs
+*#
+auto
+*~
