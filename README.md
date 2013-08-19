@@ -1,21 +1,3 @@
-###################################################################################
-#: Title       : README.md
-
-#: Description : Salvatore M Cosseddu Curriculum Vitae
-#: Written on Monday, 19 August 2013.
-#: Version     : 0.01								  #
-# 										  #
-#										  #
-#  COPYRIGHT					       				  #
-#  Copyright (C) 2013. Salvatore Cosseddu	       				  #
-#  Centre for Scientific Computing, University of Warwick.		       	  #
-#  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>. #
-#  This is free software: you are free to change and redistribute it.         	  #
-#  There is NO WARRANTY, to the extent permitted by law.          		  #
-#										  #
-###################################################################################
-
-
 Salvatore M Cosseddu CV 
 =====
 Version     : 1.0	
