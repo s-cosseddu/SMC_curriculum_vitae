@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt,final]{memoir}
+\documentclass[a4paper,11pt,final]{memoir}
 
 % forked from 
 % http://www.howtotex.com/templates/creating-a-designers-cv-in-latex/
@@ -12,9 +12,17 @@
 % ####################################
 %            page style
 % ###################################
-\renewcommand{\familydefault}{bch}
-\pagestyle{empty}
+% font type, sans serif, as required (refer to http://www.tug.dk/FontCatalogue)
+%\renewcommand{\familydefault}{bch}
+%\usepackage[scaled]{uarial}     % 
+\usepackage[scaled]{helvet}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+%  centred page numbers at the bottom
+\pagestyle{plain}
 \setlength{\parindent}{0pt}
+\linespread{0.9}
 % margins
 \usepackage[top=2.0cm,left=1.9cm,right=1.9cm,bottom=2.0cm]{geometry}
 
@@ -35,8 +43,8 @@
 % define macros 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\Sep}{\vspace{1.5em}}
-\newcommand{\SmallSep}{\vspace{0.5em}}
+\newcommand{\Sep}{\vspace{1.em}}
+\newcommand{\SmallSep}{\vspace{0.2em}}
 
 %'About me' section:
 %environment is called AboutMe and can be used with \begin{AboutMe}...\end{AboutMe}.
@@ -78,7 +86,7 @@ Coventry, CV4 7AL, United Kingdom \\
 \CVItem{ Doctor of Philosophy}{Biophysics/Biophysical Chemistry (PhD) \hfill April 2010 to date} \\
 School of Engineering and Centre for Scientific Computing, \\
 University of Warwick, Coventry, UK %\\
-\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -2pt
+\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -1.5pt
 \item [Thesis:] \textit{Structure and Dynamics of Protein in the Permeation and Gating of
   Potassium Ion Channels: Identifying Molecular Determinants and Developing Coarse-Grained
   Approaches}.
@@ -96,7 +104,7 @@ University of Warwick, Coventry, UK %\\
 
 \CVItem{Master of Science}{Physical Chemistry and Inorganic Chemistry (MSc, First-Class Honours)\hfill March 2010}\\
 Universit\`a degli Studi di Sassari, Sassari, Italy %\\ 
-\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -2pt
+\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -1.5pt
 \item [Thesis:] One year project on developing a Kinetic Monte Carlo model to describe
   diffusion and reactivity in MFI-type zeolites such as Silicalite-1 and ZSM-5, in
   particular xylene
@@ -109,7 +117,7 @@ Universit\`a degli Studi di Sassari, Sassari, Italy %\\
  
 \CVItem{Bachelor of Science}{Chemistry (BSc, First-Class Honours) \hfill  March 2008}\\
 Universit\`a degli Studi di Sassari, Sassari, Italy %\\
-\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -2pt
+\begin{description} [style=multiline,leftmargin=3cm,font=\normalfont] \itemsep -1.5pt
 \item [Thesis:] Six month project on developing a Cellular Lattice Gas Automaton to investigate
 the reactivity of molecules diffusing in zeolites.
 \item[Main subjects:] Physical chemistry, organic chemistry, analytical chemistry,
@@ -133,7 +141,7 @@ Laboratory demonstrator for Material Microstructure Laboratory and Statistical M
 \Sep
 \CVSection{ADDITIONAL TRAINING AND CONFERENCES} 
 \CVItem{Additional Training} 
-\begin{itemize} \itemsep -2pt % Reduce space between items
+\begin{itemize} \itemsep -1.5pt % Reduce space between items
 \item \textit{CCP-BioSim workshop on Free energy methods for modelling of protein-ligand
   interactions}, 21 Nov 2012, University of Southampton, UK;
 \item \textit{An Introduction to NAG Numerical Components}, 10 Jul 2012, University of Warwick, UK;
@@ -152,7 +160,7 @@ Laboratory, UK;
 \SmallSep
 
 \CVItem{Conferences} 
-\begin{itemize} \itemsep -2pt  % Reduce space between items
+\begin{itemize} \itemsep -1.5pt  % Reduce space between items
 \item \textit{CCP5/RSC workshop Advances in Theory and Simulation of non-Equilibrium Systems},
   26 - 27 Jun 2013, Imperial College, UK;
 \item \textit{CCP5-MDNet Mathematical Challenges in Molecular Dynamics}, 2 - 5 Apr 2013, University
@@ -251,7 +259,7 @@ Basic knowledge:
 %----------------------------------------------------------------------------------------
 \Sep
 \CVSection{PUBLICATIONS} 
-\begin{itemize} \itemsep -2pt % Reduce space between items
+\begin{itemize} \itemsep -1.5pt % Reduce space between items
 \item S. M. Cosseddu, I. A. Khovanov, M. P. Allen, P. M. Rodger, D. G. Luchinsky,
   P. V. E. McClintock, \textit{Dynamics of Ions in the Selectivity Filter of the KcsA Channel: Towards a Coupled
   Brownian Particle Description}, EJP-ST, 2013, accepted.
@@ -272,10 +280,12 @@ Associate member of the Institute of Physics.
 %----------------------------------------------------------------------------------------
 \Sep
 \CVSection{LANGUAGES} 
-\begin{itemize} \itemsep -2pt % Reduce space between items
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+%\begin{itemize} \itemsep -1.5pt % Reduce space between items
 \item Italian - native language.
 \item English - speak fluently and read/write with high proficiency.
-\end{itemize}
+%\end{itemize}
+\end{compactitem}
 % ----------------------------------------------------------------------------------------
 
 \end{document}
