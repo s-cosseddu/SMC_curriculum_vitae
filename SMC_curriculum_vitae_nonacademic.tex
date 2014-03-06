@@ -1,0 +1,324 @@
+\documentclass[a4paper,10pt,final]{letter}
+
+% forked from 
+% http://www.howtotex.com/templates/creating-a-designers-cv-in-latex/
+
+% common packages
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% ####################################
+%            page style
+% ###################################
+\renewcommand{\familydefault}{bch}
+\usepackage{microtype}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+% margins
+\usepackage[top=2.0cm,left=1.9cm,right=1.9cm,bottom=2.0cm]{geometry}
+
+
+% ####################################
+%               lists 
+% ###################################
+% compact and columned
+\usepackage{multicol}
+	\setlength{\multicolsep}{0pt}
+\usepackage{paralist}
+% change symbol standard list
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{\color{RoyalBlue}$\circ$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% define macros 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\Sep}{\vspace{1em}}
+\newcommand{\SmallSep}{\vspace{0.4em}}
+
+%'About me' section:
+%environment is called AboutMe and can be used with \begin{AboutMe}...\end{AboutMe}.
+\newenvironment{AboutMe}
+	{\ignorespaces\textbf{\color{RoyalBlue} About me}}
+	{\Sep\ignorespacesafterend}
+
+% to create a new section (\CVSection) and to create a new item/entry (\CVItem).
+
+\newcommand{\CVSection}[1]
+	{\Large\textbf{#1}\par
+	\SmallSep\normalsize\normalfont}
+\newcommand{\CVItem}[2]
+	{\textit{\textbf{\color{RoyalBlue} #1}} #2}
+
+
+%######################## 
+%        MAIN      
+%######################## 
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND ADDRESS(ES) SECTION
+%----------------------------------------------------------------------------------------
+\Huge {\bfseries \color{RoyalBlue} Salvatore M. Cosseddu} \\
+\small
+ \textbf{E-Mail:} \url{salvatore.cosseddu@gmail.com} \\
+\textbf{Telephone:} +44 (0)77 38245847
+%----------------------------------------------------------------------------------------
+\normalsize\normalfont
+\SmallSep
+\Sep
+
+\CVSection{EDUCATION}
+\CVItem{ Doctor of Philosophy}{Biophysics/Biophysical Chemistry (PhD) \hfill April 2010 to date} \\
+School of Engineering and Centre for Scientific Computing, \\
+University of Warwick, Coventry, UK %\\
+\begin{description} [style=multiline,leftmargin=2.6cm,font=\normalfont,topsep=0.1cm,itemsep=-3.5pt]
+\item [Thesis:] \textit{Structure and Dynamics of Protein in the Permeation, Selectivity
+    and Gating of Potassium Ion Channels}.
+\item [Research description:] Interdisciplinary joint research project between the
+  Universities of Warwick and Lancaster, developed under the supervision of Dr Igor
+  Khovanov (School of Engineering), Prof Mike P Allen (Department of Physics) and Prof
+  Mark Rodger (Department of Chemistry), in collaboration with the Prof McClintock's group
+  (Department of Physics, University of Lancaster), funded by EPSRC. I was associated with
+  ``Molecular Simulation'' and ``Biomedical'' research groups. The research covered
+  different fundamental features of K$^+$ ion channels: permeation, selectivity and
+  inactivation processes. The research took advantage of the large-scale high performance
+  computing resources of the Centre for Scientific Computing (University of
+  Warwick).% ($\sim 6000$ core 4X QDR InfiniBand Linux cluster).
+\end{description}
+\SmallSep
+
+\CVItem{Master of Science}{Physical Chemistry and Inorganic Chemistry (MSc, First-Class Honours)\hfill March 2010}\\
+Universit\`a degli Studi di Sassari, Sassari, Italy %\\ 
+\begin{description}[style=multiline,leftmargin=2.6cm,font=\normalfont,topsep=0.1cm,itemsep=-3.5pt]
+\item [Final project:] One year project on developing a Kinetic Monte Carlo model to
+  describe diffusion and reactivity in MFI-type zeolites.
+\end{description}
+  \SmallSep
+ 
+\CVItem{Bachelor of Science}{Chemistry (BSc, First-Class Honours) \hfill  March 2008}\\
+Universit\`a degli Studi di Sassari, Sassari, Italy\\
+University of Nottingham, Nottingham, UK, six months within the Erasmus exchange programme  %\\
+\begin{description}[style=multiline,leftmargin=2.6cm,font=\normalfont,topsep=0.1cm,,itemsep=-3.5pt]
+\item [Final project:] Six-months project on a Cellular Lattice Gas Automaton model to simulate
+  reactivity in zeolites.
+\end{description}
+
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\Sep
+\CVSection{PROFESSIONAL EXPERIENCE}
+\CVItem{Researcher} \\
+Strong experience on investigation of 
+\begin{compactitem}[\color{RoyalBlue}$\circ$] 
+\item Mechanisms and energetics of biological and non-biological processes;
+\item Structure-function relationship of protein;
+\item Highly-correlated non-linear dynamical properties of biological systems;
+\item Affinities between proteins and their substrates.
+\end{compactitem}
+
+I have been involved in a joint research proposal on biological ion channels, submitted to
+EPSRC, between universities of Warwick and Lancaster in which I am a named researcher, PI
+Prof P.V.E. McClintock.
+
+\SmallSep
+\CVItem{Laboratory demonstrator} \\ %{\hfill Apr 2010 - Present} \\
+University of Warwick, Coventry, UK  \\
+Laboratory demonstrator for Material Microstructure Laboratory and Statistical Mechanics. 
+
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\Sep
+\CVSection{SCIENTIFIC/TECHNICAL SKILLS}
+
+\CVItem{Broad interdisciplinary background} 
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item Physical chemistry,
+\item Biophysics,
+\item Biochemistry,
+\item Molecular biology,
+\item Organic and inorganic chemistry,
+\item Pharmaceutical chemistry,
+\item Statistics,
+\item Classical and quantum mechanics
+\item Statistical mechanics,
+\item Thermodynamics,
+\item Scientific and high performance computing. 
+\end{compactitem}
+\end{multicols}
+\SmallSep
+\CVItem{Technical skills}
+\begin{multicols}{3}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item Fine atomistic models (MD),
+\item State-of-the-art free-energy\\ methods (MetaD, US)
+\item Statistical analyses.
+\item Coarse grained models (MC, KMC, BD)
+\end{compactitem}
+\end{multicols}
+\Sep
+\pagebreak
+% other skills
+\CVSection{COMPUTATIONAL SKILLS}
+\begin{multicols}{3}
+\CVItem{Molecular simulations\\ and statistical analysis}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item NAMD,
+\item VMD,
+\item R,
+\item Gnuplot.
+\end{compactitem}
+\SmallSep 
+\CVItem{Languages and 
+  tools}\\
+Excellent knowledge:
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item FORTRAN,
+\item Tcl,
+\item Bash,
+\end{compactitem}
+Additional:
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item Make and git (good),
+\item C, Matlab, Python (basic).
+\end{compactitem}
+\SmallSep
+\CVItem{Office and graphics tools} 
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item \LaTeX{} (including Beamer),
+\item Emacs,
+\item Microsoft Office/OpenOffice, 
+\item Gimp, Inkscape and Blender.
+\end{compactitem}
+\SmallSep
+
+\CVItem{System administrator}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item GNU/Linux (Debian and derived, Fedora, SUSE; I personally managed the Debian
+  GNU/Linux workstations used during my PhD and MSc projects),
+\item Mac OS X,
+\item Windows OS.
+\end{compactitem}
+\end{multicols}
+
+%----------------------------------------------------------------------------------------
+% compactitem slightly wider
+%\setlength{\plitemsep}{0.15pt}
+%\setlength{\pltopsep}{2.5pt}
+%\setlength{\topsep}{-1cm}
+
+\Sep
+\CVSection{COMMUNICATION SKILLS}
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item Pitch presentation and Poster presented to \textit{2nd Annual CCP-BioSim Conference, Frontiers of
+    Biomolecular Simulation}, 25 - 27 Mar 2013, Uni.\,of Nottingham, UK;
+\item Presentation of my research on \emph{inactivation} in K$^+$ channels at
+  CSC seminar, 11 Mar 2013, Uni.\,of Warwick, UK;
+\item Presentation of my research on \emph{permeation} in K$^+$  channels at CSC
+  seminar, 2 Dec 2013, Uni.\,of Warwick, UK;
+\item Presentations at postgraduate days of both CSC and School of Engineering;
+\item Poster presented to \textit{South West Computational Chemists annual
+    meeting 2013}, 24 Sep 2013, Uni.\,of Southampton, UK;
+\item Poster presented to \textit{Beyond Molecular Dynamics: Long Time Atomic-Scale Simulations}, 26 - 29 Mar 2012,
+  Max Planck Institute for the Physics of Complex Systems, Dresden, Germany;
+\item I discussed and presented my works in meetings with various collaborators in which I
+  learnt how to communicate with people with very different backgrounds;
+\item I presented my research and published papers in several occasions during regular
+  meetings of the groups I was associated with;
+\end{compactitem}
+
+\Sep
+\CVSection{PRIZES} 
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item Awarded with the prize for the best talk at Centre for Scientific Computing's postgraduate day 2012.
+\item Poster selected by the School of Engineering in 2011 (still exposed) for advertising the
+  different research activities of the department.
+\end{compactitem}
+
+%----------------------------------------------------------------------------------------
+%	Additional Training and Conferences
+%----------------------------------------------------------------------------------------
+
+\Sep
+\CVSection{SELECTED ADDITIONAL CONFERENCES AND TRAINING} 
+
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item \textit{CCP5/RSC workshop Advances in Theory and Simulation of non-Equilibrium Systems},
+  26 - 27 Jun 2013, Imperial College, UK;
+\item \textit{CCP-BioSim workshop on Free energy methods for modelling of protein-ligand
+  interactions}, 21 Nov 2012, Uni.\,of Southampton, UK;
+\item \textit{Mathematical Modelling of Ion Channels Workshop}, 5 - 6 Sep 2011, St Anne's
+  College, Oxford, UK;
+\item \textit{Trends in protein biophysics: from in silico molecules to in vivo and vitro
+  proteins}, 17 - 19 May 2011, Uni.\,of Warwick, UK;
+\item \textit{CECAM/TCBG Computational Biophysics Workshop in Bremen},  17 - 21 Oct 2011,
+  Jacobs University, Germany;  
+\item \textit{IOP Condensed Matter and Materials Physics CMMP10}, 14 -16 Dec 2010,
+  Uni.\,of Warwick, UK;
+\item \textit{High Performance Scientific Computing} module, 2010/2011, Uni.\,of Warwick,
+  UK;
+\item \textit{CCP5 CECAM Methods in Molecular Simulation Summer School 2010}, 18 - 27 Jul 2010, Queens University
+  Belfast, UK.
+%\item \textit{CCP5-MDNet Mathematical Challenges in Molecular Dynamics}, 2 - 5 Apr 2013, University
+%  of Warwick, UK; 
+%\item \textit{CCPB Collective Variable Methods in Biomolecular Simulation Principles and Applications},
+%4 Nov 2011, Uni.\,of Nottingham, UK
+%\item \textit{MIRaW day on Monte Carlo Methods}, 7 Mar 2011, Mathematics Institute, University
+%  of Warwick, UK;
+%\item \textit{An Introduction to NAG Numerical Components}, 10 Jul 2012, Uni.\,of Warwick, UK;
+%\item \textit{CCP5 DL\_POLY Training Workshop}, 2 - 3 Feb 2011, Daresbury
+%Laboratory, UK;
+%\item \textit{CSC / NAG Debugging, Profiling and Optimising},  8 - 9 Nov 2011, Uni.\,of Warwick, UK;
+% \item \textit{CSC / NAG Autumn School in Core Algorithms for High Performance Scientific
+%   Computing}, 26 - 30 Sep 2011, Uni.\,of Warwick, UK;
+%\item \textit{Monte Carlo and molecular dynamics} module, 2010/2011, MPAGS, Uni.\,of Warwick, UK;
+\end{compactitem}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\Sep
+\CVSection{PUBLICATIONS} 
+\begin{compactitem}[\color{RoyalBlue}$\circ$]
+\item S. M. Cosseddu, I. A. Khovanov, M. P. Allen, P. M. Rodger, D. G. Luchinsky,
+  P. V. E. McClintock, \textit{Dynamics of Ions in the Selectivity Filter of the KcsA
+    Channel: Towards a Coupled Brownian Particle Description}, EJP-ST, 222, 2595-2605,
+  2013.
+\item S. M. Cosseddu, M. P. Allen, P. M. Rodger, I. A. Khovanov, \textit{Highly-Coupled Network of
+    Residues Underlying the Regulation of Conductivity in K$^+$ Ion Channels}, in preparation.
+\item S. M. Cosseddu, M. P. Allen, P. M. Rodger, I. A. Khovanov, \textit{Mechanism and Energetic
+  of C-type Inactivation in K$^+$ Ion Channels}, in preparation.
+\item S. M. Cosseddu, M. P. Allen, P. M. Rodger, I. A. Khovanov, \textit{Energetics of
+    Permeation and Selectivity of the Conductive State of K$^+$ Ion Channels}, in
+  preparation.
+\end{compactitem}
+
+%----------------------------------------------------------------------------------------
+%	MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+\Sep
+\CVSection{MEMBERSHIPS} 
+Associate member of the Institute of Physics. 
+
+% %----------------------------------------------------------------------------------------
+% %	HONORS SECTION
+% %----------------------------------------------------------------------------------------
+% \Sep
+% \CVSection{LANGUAGES} 
+% %\begin{itemize} \itemsep -2pt % Reduce space between items
+% \begin{compactitem}[\color{RoyalBlue}$\circ$]
+% \item Italian - native language.
+% \item English - speak fluently and read/write with high proficiency.
+% \end{compactitem}
+% % \end{itemize}
+% % ----------------------------------------------------------------------------------------
+
+\end{document}
